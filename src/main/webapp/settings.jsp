@@ -21,7 +21,7 @@
                     image1=(image1==null)?"https://upload.wikimedia.org/wikipedia/commons/9/9a/PNG_transparency_demonstration_2.png":image1;
                     image2=(image2==null)?"https://upload.wikimedia.org/wikipedia/commons/9/9a/PNG_transparency_demonstration_2.png":image2;
                     image3=(image3==null)?"https://upload.wikimedia.org/wikipedia/commons/9/9a/PNG_transparency_demonstration_2.png":image3;
-                %>
+                %>                        
                 <li>1: <input type="text" name="image1" value="<%=image1%>" style="width: 800px"/></li>
                 <li>2: <input type="text" name="image2" value="<%=image2%>" style="width: 800px"/></li>
                 <li>3: <input type="text" name="image3" value="<%=image3%>" style="width: 800px"/></li>

@@ -15,6 +15,8 @@
                 <td style="width: 33%"><img src="image?id=2" style="width:100%"/></td>
                 <td><img src="image?id=3" style="width:100%"/></td>
             </tr>
+                
         </table>
+        
     </body>
 </html>

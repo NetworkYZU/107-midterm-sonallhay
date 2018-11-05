@@ -8,6 +8,7 @@ package lendle.courses.network.midterm;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import static java.lang.System.out;
 import java.net.URL;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -46,7 +47,16 @@ public class GetImageServlet extends HttpServlet {
         你會利用到 URL 類別的建構子以及 URL 類別的 openStream 函式
         來開啟影像的 InputStream
         */
-       
+        String str=(String)request.getParameter("id");
+        HttpSession s = request.getSession();
+        String id_x = (String)s.getAttribute(str);
+        if(id_x==null){
+          id_x = defaultImageString;
+        }
+        try (OutputStream output=response.getOutputStream(); InputStream input=new URL(id_x).openStream()) {
+            IOUtils.copy(input, output);
+        }   
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -89,3 +99,6 @@ public class GetImageServlet extends HttpServlet {
     }// </editor-fold>
 
 }
+//https://vignette.wikia.nocookie.net/fantendo/images/6/6e/Small-mario.png/revision/latest?cb=20120718024112
+//https://img00.deviantart.net/8726/i/2012/247/1/5/png_moon_by_paradise234-d5dkuqk.png
+//http://www.pngmart.com/files/3/Vector-PNG-File.png
