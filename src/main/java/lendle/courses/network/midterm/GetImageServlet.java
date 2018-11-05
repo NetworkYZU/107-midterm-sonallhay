@@ -46,17 +46,7 @@ public class GetImageServlet extends HttpServlet {
         你會利用到 URL 類別的建構子以及 URL 類別的 openStream 函式
         來開啟影像的 InputStream
         */
-        
-        /*String id=request.getParameter("id");
-        HttpSession session=request.getSession();
-        String imageURLString=(String) session.getAttribute(id);
-        if(imageURLString==null){
-            imageURLString=defaultImageString;
-        }
-        try(OutputStream output=response.getOutputStream(); 
-                InputStream input=new URL(imageURLString).openStream()){
-            IOUtils.copy(input, output);
-        }*/
+       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
